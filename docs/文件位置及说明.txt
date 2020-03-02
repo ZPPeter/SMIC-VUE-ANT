@@ -1,0 +1,21 @@
+src\layouts\UserLayout.vue
+用于 登录 注册 UI
+
+src\layouts\PageView.vue
+被 src\views\dashboard\Workplace.vue 使用
+<template>
+  <page-view :avatar="avatar" :title="false">
+
+src\layouts\BasicLayout.vue
+判断 SideMenu --> v-if="isMobile()"
+调用路由 mainMenu: state => state.permission.addRouters 
+Workplace.vue 是路由默认界面
+
+src\components\GlobalHeader\GlobalHeader.vue 
+被 BasicLayout.vue 使用
+
+src\views\dashboard\Workplace.vue  <- 路由 <- BasicLayout
+
+
+
+

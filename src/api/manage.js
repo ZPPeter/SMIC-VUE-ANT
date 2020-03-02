@@ -1,5 +1,4 @@
 import { axios } from '@/utils/request'
-
 const api = {
   user: '/user',
   role: '/role',
@@ -8,7 +7,6 @@ const api = {
   permissionNoPager: '/permission/no-pager',
   orgTree: '/org/tree'
 }
-
 export default api
 
 export function getUserList (parameter) {

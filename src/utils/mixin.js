@@ -54,6 +54,7 @@ const AppDeviceEnquire = {
   mounted () {
     const { $store } = this
     deviceEnquire(deviceType => {
+      //alert(deviceType)
       switch (deviceType) {
         case DEVICE_TYPE.DESKTOP:
           $store.commit('TOGGLE_DEVICE', 'desktop')

@@ -1,8 +1,10 @@
 import { isIE } from '@/utils/util'
 
 // 判断环境不是 prod 或者 preview 是 true 时，加载 mock 服务
+//console.log(process.env.NODE_ENV)
+//console.log(process.env.VUE_APP_PREVIEW)
 if (process.env.NODE_ENV !== 'production' || process.env.VUE_APP_PREVIEW === 'true') {
-  if (isIE()) {
+if (isIE()) {
     console.error('ERROR: `mockjs` NOT SUPPORT `IE` PLEASE DO NOT USE IN `production` ENV.')
   }
   // 使用同步加载依赖

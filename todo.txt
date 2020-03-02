@@ -1,1 +1,6 @@
-权限测试
+
+首页/仪表盘/工作台 + Icon
+
+const taskInfo = 'http://192.168.3.43:8000/ShowDetail?id=';
+
+HeadInfo +@click 鼠标形状

@@ -8,18 +8,18 @@
       <div>系统管理员 | GPS接收机检定</div>
     </div>
     <div slot="extra">      
-      <a-row class="more-info">
+      <a-row :justify="end" class="more-info">
         <a-col :span="6">
-          <head-info @click="test(1)" title="待检定" content="56" :center="true" :bordered="false"/> <!-- :center="true" :bordered="true" -->
+          <head-info title="待检" content="561" :center="true" :bordered="true"/> <!-- :center="true" :bordered="true" -->
         </a-col>
         <a-col :span="6">
-          <head-info @click="test(2)" title="正在检定" content="21" :center="true" :bordered="true"/>
+          <head-info title="在检" content="2431" :center="true" :bordered="true"/>
         </a-col>
         <a-col :span="6">
-          <head-info title="待核验" content="22" :center="true" :bordered="true"/>
+          <head-info title="核验" content="2312" :center="true" :bordered="true"/>
         </a-col>
         <a-col :span="6">
-          <head-info title="待批准" content="8" :center="true" :bordered="true"/>
+          <head-info title="批准" content="2222" :center="true" :bordered="false"/>
         </a-col>
       </a-row>
     </div>
@@ -217,10 +217,7 @@ export default {
     this.getTeams()
     this.initRadar()
   },
-  methods: {
-    test(item){
-      alert(item)
-    },
+  methods: {    
     getProjects() {
       this.$http.get('/list/search/projects').then(res => {
         this.projects = res.result && res.result.data
@@ -261,6 +258,7 @@ export default {
 .project-list {
   .card-title {
     font-size: 0;
+
     a {
       color: rgba(0, 0, 0, 0.85);
       margin-left: 12px;
@@ -269,6 +267,7 @@ export default {
       display: inline-block;
       vertical-align: top;
       font-size: 14px;
+
       &:hover {
         color: #1890ff;
       }
@@ -291,6 +290,7 @@ export default {
       color: rgba(0, 0, 0, 0.45);
       display: inline-block;
       flex: 1 1 0;
+
       &:hover {
         color: #1890ff;
       }
@@ -348,25 +348,6 @@ export default {
   float: none;//none 文本不浮动
   display: flex;
   justify-content:center;
-  min-width: 320px;
-  //width: 320px;
-  //background-color: yellow;
-}
-.tablet{
-.project-list {
-    .project-card-grid {
-      width: 100%;
-    }
-  }
-  .more-info {
-    //tablet
-    min-width: 320px;
-    margin-left: 0px;
-  }
-
-  .headerContent .title .welcome-text {
-    display: none;
-  }  
 }
 .mobile {
   .project-list {
@@ -376,7 +357,6 @@ export default {
   }
   .more-info {
     //mobile
-    min-width: 240px;
     margin-left: 0px;
   }
 

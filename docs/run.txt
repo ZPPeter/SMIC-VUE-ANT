@@ -1,0 +1,17 @@
+npm install
+npm update --save 
+npm run serve
+
+yarn install 有可能有问题
+yarn serve
+-------------------------------------------------------------------------
+error: Trailing spaces not allowed (no-trailing-spaces) at...
+errors potentially fixable with the `--fix` option
+关闭 Eslint (不推荐) 移除 `package.json` 中 `eslintConfig` 整个节点代码,或许本没有此节点
+vue.config.js 下的 `lintOnSave` 值改为 `false`
+
+绝对路径
+/public/logo.png 引用方式
+<img src="/img/logo.png"/></a>
+/src/assets 引用方式 
+<img src="@/assets/logo.png">

@@ -41,6 +41,7 @@ const themePluginOption = {
   }
 }
 
+//const createThemeColorReplacerPlugin = function(){return new ThemeColorReplacer(themePluginOption)}
 const createThemeColorReplacerPlugin = () => new ThemeColorReplacer(themePluginOption)
 
 module.exports = createThemeColorReplacerPlugin

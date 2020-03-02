@@ -4,12 +4,13 @@
       <div class="top">
         <div class="header">
           <a href="/">
-            <img src="~@/assets/logo.svg" class="logo" alt="logo">
-            <span class="title">Ant Design</span>
+            <img src="~@/assets/logo.png" class="logo" alt="logo">
+            <!-- my-icon type="icon-BLOCK" style="font-size: 36px;" / -->
+            <span class="title">测绘仪器检定</span>
           </a>
         </div>
         <div class="desc">
-          Ant Design 是西湖区最具影响力的 Web 设计规范
+          SMIC 测绘仪器检定综合管理信息系统平台
         </div>
       </div>
 
@@ -22,7 +23,7 @@
           <a href="_self">条款</a>
         </div>
         <div class="copyright">
-          Copyright &copy; 2018 白鹭学园技术组出品
+          Copyright &copy; 2020 SDGIC
         </div>
       </div>
     </div>
@@ -51,25 +52,24 @@ export default {
 
 <style lang="less" scoped>
   #userLayout.user-layout-wrapper {
-    height: 100%;
-
+    //height: 100%;
     &.mobile {
+      height: 100%;
       .container {
+        //padding: 45px 0 45px;
         .main {
           max-width: 368px;
           width: 98%;
         }
       }
     }
-
     .container {
       width: 100%;
       min-height: 100%;
       background: #f0f2f5 url(~@/assets/background.svg) no-repeat 50%;
       background-size: 100%;
-      padding: 110px 0 144px;
+      padding: 45px 0 85px;
       position: relative;
-
       a {
         text-decoration: none;
       }

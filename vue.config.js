@@ -7,7 +7,6 @@ function resolve (dir) {
 }
 
 const isProd = process.env.NODE_ENV === 'production'
-
 const assetsCDN = {
   // webpack build externals
   externals: {
@@ -39,6 +38,8 @@ const vueConfig = {
   },
 
   chainWebpack: (config) => {
+    //entrypoint size limit
+    config.performance .set('hints', false);
     config.resolve.alias
       .set('@$', resolve('src'))
 
@@ -99,7 +100,7 @@ const vueConfig = {
 
   // disable source map in production
   productionSourceMap: false,
-  lintOnSave: undefined,
+  lintOnSave: false,
   // babel-loader no-ignore node_modules/*
   transpileDependencies: []
 }

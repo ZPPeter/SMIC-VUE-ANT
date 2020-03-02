@@ -12,6 +12,7 @@ const service = axios.create({
 })
 
 const err = (error) => {
+  //console.log(error)
   if (error.response) {
     const data = error.response.data
     const token = Vue.ls.get(ACCESS_TOKEN)

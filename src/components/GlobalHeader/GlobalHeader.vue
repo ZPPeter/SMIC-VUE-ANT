@@ -1,4 +1,5 @@
 <template>
+  <!--动画效果-->
   <transition name="showHeader">
     <div v-if="visible" class="header-animat">
       <a-layout-header
@@ -7,8 +8,10 @@
         :style="{ padding: '0' }">
         <div v-if="mode === 'sidemenu'" class="header">
           <a-icon v-if="device==='mobile'" class="trigger" :type="collapsed ? 'menu-fold' : 'menu-unfold'" @click="toggle"/>
-          <a-icon v-else class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="toggle"/>
-          <user-menu></user-menu>
+          <a-icon v-else class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="toggle"/>          
+          <span class="SystemName">欢迎使用本系统。</span>
+          <user-menu>
+          </user-menu>
         </div>
         <div v-else :class="['top-nav-header-index', theme]">
           <div class="header-index-wide">
@@ -21,7 +24,7 @@
           </div>
         </div>
       </a-layout-header>
-    </div>
+    </div>    
   </transition>
 </template>
 
@@ -75,11 +78,10 @@ export default {
     document.addEventListener('scroll', this.handleScroll, { passive: true })
   },
   methods: {
-    handleScroll () {
+    handleScroll () {//上下滚动    
       if (!this.autoHideHeader) {
         return
       }
-
       const scrollTop = document.body.scrollTop + document.documentElement.scrollTop
       if (!this.ticking) {
         this.ticking = true
@@ -121,5 +123,14 @@ export default {
 }
 .showHeader-enter, .showHeader-leave-to {
   opacity: 0;
+}
+.SystemName{
+  font-size: 21px;
+}
+@media only screen and (max-width: 576px) {
+.SystemName{
+  font-size: 21px;
+  display: none;
+}
 }
 </style>

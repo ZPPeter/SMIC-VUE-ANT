@@ -1,6 +1,6 @@
 <template>
   <div :style="!$route.meta.hiddenHeaderContent ? 'margin: -24px -24px 0px;' : null">
-    <!-- pageHeader , route meta :true on hide -->
+    <!-- pageHeader , route meta :true on hide -->    
     <page-header v-if="!$route.meta.hiddenHeaderContent" :title="pageTitle" :logo="logo" :avatar="avatar">
       <slot slot="action" name="action"></slot>
       <slot slot="content" name="headerContent"></slot>
@@ -156,12 +156,10 @@ export default {
   .page-menu-tabs {
     margin-top: 48px;
   }
-
   .extra-img {
     margin-top: -60px;
     text-align: center;
     width: 195px;
-
     img {
       width: 100%;
     }
@@ -172,7 +170,16 @@ export default {
       margin-top: 0;
       text-align: center;
       width: 96px;
-
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .tablet{
+    .extra-img{
+      margin-top: 0;
+      text-align: center;
+      width: 96px;
       img{
         width: 100%;
       }

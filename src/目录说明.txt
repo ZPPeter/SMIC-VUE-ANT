@@ -1,0 +1,4 @@
+config  设置 
+api     访问数据库接口 
+utils   公用函数 
+store   记录状态 vuex
